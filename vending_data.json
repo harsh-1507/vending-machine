@@ -1,0 +1,79 @@
+{
+  "items": {
+    "Coke": {
+      "price": 20,
+      "qty": 10,
+      "cat": "Drinks"
+    },
+    "Lays": {
+      "price": 20,
+      "qty": 14,
+      "cat": "Snacks"
+    },
+    "Munch": {
+      "price": 20,
+      "qty": -1,
+      "cat": "Chocolates"
+    },
+    "Snickers": {
+      "price": 20,
+      "qty": 8,
+      "cat": "Chocolates"
+    },
+    "Butter Milk": {
+      "price": 20,
+      "qty": 10,
+      "cat": "Drinks"
+    },
+    "Fanta": {
+      "price": 20,
+      "qty": 5,
+      "cat": "Drinks"
+    },
+    "Aloo Bhujia": {
+      "price": 30,
+      "qty": 4,
+      "cat": "Snacks"
+    }
+  },
+  "orders": [
+    {
+      "id": 1,
+      "user": "Killer",
+      "items": {
+        "Munch": 2,
+        "Aloo Bhujia": 1
+      },
+      "total": 70,
+      "time": "2025-11-26 09:51:59"
+    },
+    {
+      "id": 2,
+      "user": "mom",
+      "items": {
+        "Lays": 1,
+        "Fanta": 1,
+        "Snickers": 2
+      },
+      "total": 80,
+      "time": "2025-12-11 08:51:14"
+    },
+    {
+      "id": 3,
+      "user": "yash",
+      "items": {
+        "Munch": 9,
+        "Fanta": 4
+      },
+      "total": 260,
+      "time": "2026-08-30 19:19:24"
+    }
+  ],
+  "revenue": 410,
+  "order_count": 3,
+  "categories": [
+    "Drinks",
+    "Snacks",
+    "Chocolates"
+  ]
+}

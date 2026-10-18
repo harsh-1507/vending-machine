@@ -1,0 +1,14 @@
+{
+  "Killer": {
+    "password": "1234",
+    "disabled": false
+  },
+  "yash": {
+    "password": "mangal",
+    "disabled": false
+  },
+  "harsh": {
+    "password": "harsh",
+    "disabled": false
+  }
+}
