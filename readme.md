@@ -1,177 +1,176 @@
-# 🥤 JustVend — Advanced Vending Machine Simulator
+# 🥤 JustVend – Vending Machine Simulator
 
-A feature-rich vending machine simulator built with Python that brings the convenience of a real-world vending machine to an interactive, keyboard-driven application. JustVend combines customer authentication, category-based shopping, cart management, payment processing, digital receipts, and an administrative dashboard in one system.
+### A Python-Based Vending Machine Application
+
+**JustVend** is a Python-based vending machine simulator designed to replicate the basic functionality of a real-world vending machine. It allows users to browse available products, make purchases, manage transactions, and generate receipts.
+
+The application uses Python for its core functionality and JSON files for storing product and user data. It focuses on implementing practical programming concepts such as file handling, data management, user interaction, and transaction processing.
+
+---
 
 ## ✨ Features
 
-### 👤 User Authentication
-- Create an account and log in securely.
-- Password input with masked characters.
-- Manage user accounts, including account deletion.
-- Maintain user sessions throughout the shopping experience.
+### 🛒 Product Management
+- Display available products along with their prices.
+- Browse products before making a purchase.
+- Maintain product information and availability.
+- Manage inventory through JSON-based data storage.
 
-### 🛍️ Shopping Experience
-- Browse products organized into categories such as Snacks, Beverages, and Chocolates.
-- View product prices and real-time stock availability.
-- Select products and quantities with input validation.
-- Add items to a shopping cart, modify quantities, or remove products.
-- View an automatically calculated cart total.
-
-### 💳 Checkout & Payments
-- Process purchases through an interactive checkout system.
-- Validate payment amounts before completing transactions.
-- Calculate and display change for overpayments.
-- Update inventory automatically after successful purchases.
-- Generate digital receipts for completed transactions.
+### 💳 Purchase & Transaction System
+- Select products for purchase.
+- Process customer transactions.
+- Validate purchase-related inputs.
+- Maintain transaction details.
 
 ### 📦 Inventory Management
-- Add new products and manage existing inventory.
-- Update product prices, quantities, and categories.
-- Monitor stock availability to prevent overselling.
-- Store inventory information persistently using JSON files.
+- Keep track of available product quantities.
+- Update inventory after purchases.
+- Maintain product information persistently.
+- Store vending machine data using JSON.
 
-### 📊 Admin Dashboard
-- Access administrative features through an owner panel.
-- Manage products and inventory.
-- View sales reports and order history.
-- Monitor total revenue and transaction counts.
-- Manage registered users.
+### 👤 User Management
+- Maintain user information.
+- Store user-related data locally.
+- Manage user records through JSON files.
 
-### 💾 Data Persistence
-- Automatically save application data in JSON format.
-- Preserve inventory, user accounts, orders, and revenue between sessions.
-- Generate transaction receipts as text files.
-- Handle file operations and invalid inputs with appropriate error handling.
+### 🧾 Receipt Generation
+- Generate receipts for completed transactions.
+- Store receipts as individual text files.
+- Maintain a record of previous purchases.
 
-## 🛠️ Tech Stack
+### ⚡ Interactive Interface
+- Simple command-line interface.
+- Menu-driven navigation.
+- User-friendly interaction through terminal input and output.
 
-| Technology | Purpose |
-|---|---|
-| **Python** | Core application logic |
-| `json` | Data serialization and persistent storage |
-| `os` | File and directory operations |
-| `datetime` | Timestamps for transactions and receipts |
-| `time` | Delays and interface feedback |
-| `readchar` | Interactive keyboard input handling |
+---
 
 ## 📁 Project Structure
 
+The project follows a simple and organized structure, separating the main application from its data files.
+
 ```text
-JustVend/
-├── src/
-│   └── vending_machine.py
-├── data/
-│   ├── vending_data.json
-│   └── users.json
-├── docs/
-│   └── README.md
-└── receipts/
-    └── receipt_*.txt
+TEAM_JUSTVEND/
+│
+├── vending_machine.py   # Main application
+│
+├── vending_data.json    # Product and inventory data
+├── users.json           # User information
+│
+├── receipt_1.txt        # Generated transaction receipt
+├── receipt_2.txt        # Generated transaction receipt
+├── receipt_3.txt        # Generated transaction receipt
+│
+├── README.md            # Project documentation
+└── .gitignore           # Files excluded from Git
 ```
 
-*Note: The exact file structure may vary depending on where the application is run and how generated data is stored.*
+*Note: User data and generated receipts are maintained locally and are excluded from the public GitHub repository.*
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## ⚙️ Requirements & Installation
 
-- Python 3.6 or higher
-- pip (Python package installer)
+### 📌 Requirements
 
-### 1. Clone the Repository
+- Python 3.x
+- Git (optional, for cloning the repository)
+
+No external Python libraries are required if using only Python's standard library.
+
+### 📥 Clone the Repository
+
+Open your terminal and execute:
 
 ```bash
 git clone https://github.com/harsh-1507/vending-machine.git
+```
+
+Navigate to the project directory:
+
+```bash
 cd vending-machine
 ```
 
-### 2. Install Dependencies
+### ▶️ Run the Application
 
-Install the required third-party library:
-
-```bash
-python -m pip install readchar
-```
-
-On Windows, you can also use:
-
-```powershell
-py -m pip install readchar
-```
-
-### 3. Run the Application
-
-If the entry-point file is in the `src` directory:
-
-```bash
-python src/vending_machine.py
-```
-
-If `vending_machine.py` is in the project root, run:
+Execute the following command:
 
 ```bash
 python vending_machine.py
 ```
 
-Choose the command that matches your actual project structure.
+On Windows, you can also use:
 
-## 🧑‍💻 How to Use
+```bash
+py vending_machine.py
+```
 
-### For Customers
-
-1. Launch JustVend.
-2. Sign up for an account or log in with existing credentials.
-3. Browse the available product categories.
-4. Select products and specify quantities.
-5. Review your cart and modify it if necessary.
-6. Proceed to checkout and enter the payment amount.
-7. Complete the transaction and receive a digital receipt.
-
-### For Administrators
-
-1. Select the Owner Panel from the main menu.
-2. Authenticate using the configured administrator password.
-3. Add products or modify existing inventory.
-4. Review sales reports, revenue, and order history.
-5. Monitor stock levels and manage registered users.
-
-## 🧠 Concepts Demonstrated
-
-JustVend applies several fundamental programming concepts:
-
-- **File Handling:** Reading and writing application data.
-- **Data Structures:** Dictionaries, lists, and nested data structures.
-- **Exception Handling:** Managing invalid inputs and file operation errors.
-- **Modular Programming:** Organizing functionality into reusable functions.
-- **Input Validation:** Checking quantities, payment amounts, and user inputs.
-- **State Management:** Maintaining user sessions and shopping cart state.
-- **Data Persistence:** Preserving application state using JSON.
-- **Transaction Processing:** Updating stock, recording orders, and generating receipts.
-
-## 🔮 Future Improvements
-
-Potential enhancements include:
-
-- Password hashing and stronger authentication.
-- Product search and filtering.
-- Low-stock alerts and inventory summaries.
-- Support for multiple payment methods.
-- Exportable sales reports and analytics.
-- Unit tests for shopping, checkout, and inventory operations.
-- A graphical user interface or web-based storefront.
-
-## 👥 Team JustVend
-
-Developed by:
-
-- **Yash Mangal**
-- **Shubham Kuvad**
-- **Harsh Lotiya**
-
-## 📄 License
-
-This project was developed for educational purposes. Licensing and reuse terms can be added as required.
+The application will start in the terminal, allowing users to interact with the vending machine through its menu.
 
 ---
 
-*JustVend — Smart shopping, simplified.* 🥤
+## 💾 Data Storage
+
+JustVend uses JSON files to maintain application data between executions.
+
+| File | Purpose |
+|---|---|
+| `vending_data.json` | Stores vending machine product and inventory information. |
+| `users.json` | Stores user-related information locally. |
+| `receipt_*.txt` | Stores generated transaction receipts. |
+
+### 📦 JSON-Based Storage
+
+JSON provides a lightweight and convenient way to store structured information without requiring an external database.
+
+- Product information can be maintained in `vending_data.json`.
+- User information is stored separately in `users.json`.
+- Transaction receipts are generated as individual text files.
+
+This approach keeps application data organized and makes it easier to maintain and update records.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Usage |
+|---|---|
+| 🐍 Python 3 | Core application development |
+| 📄 JSON | Product and user data storage |
+| 📝 File Handling | Reading and writing application data and receipts |
+| 🔧 Git | Version control |
+| 🐙 GitHub | Source code hosting and collaboration |
+
+---
+
+## 🎯 Project Objectives
+
+The project focuses on applying fundamental programming concepts to build a practical application.
+
+Key learning objectives include:
+
+- Understanding file handling and persistent data storage.
+- Working with JSON for structured data management.
+- Implementing transaction and inventory management.
+- Handling user input and validation.
+- Organizing application functionality into manageable components.
+- Developing an interactive command-line application.
+
+---
+
+## 👨‍💻 Contributors
+
+**TEAM JUSTVEND**
+
+Developed as a collaborative programming project.
+
+---
+
+## 📜 License
+
+This project was developed for academic and educational purposes.
+
+---
+
+⭐ **Thanks for checking out JustVend!**
