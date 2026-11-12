@@ -1,5 +1,23 @@
+# Windows metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+*Zone.Identifier*
+
+# Generated receipts
+receipt_*
+
+# User data
+users.json
+
+# Python cache
 __pycache__/
-*.py[cod]
-.venv/
-venv/
-.env
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
